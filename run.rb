@@ -1,5 +1,5 @@
 def main
-    return if ARGV.empty?
+    raise if ARGV.empty?
     
     file = ARGV[0]
     cmd = "mcs #{file}.cs && mono #{file}.exe"
