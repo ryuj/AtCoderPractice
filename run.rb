@@ -1,7 +1,6 @@
 def main
-    raise if ARGV.empty?
-    
-    file = ARGV[0]
+    ary = File.open("target").to_a
+    file = ary[0]
     cmd = "mcs #{file}.cs && mono #{file}.exe"
 
     puts cmd
